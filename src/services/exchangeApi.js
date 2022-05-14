@@ -1,4 +1,4 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 const exhangeApiHeaders = {
   'requestURL': 'https://api.exchangerate.host'
@@ -11,12 +11,17 @@ const createRequest = (url) => ({ url, headers: exhangeApiHeaders })
 export const exchangeApi = createApi({
   reducerPath: 'exchangeApi',
   baseQuery: fetchBaseQuery({ BaseUrl }),
+
   endpoints: (builder) => {
-    getExchange: builder.query({
+      getExchange: builder.query({
       query: () => createRequest('/latest')
     })
   }
 })
+
+export const {
+  useGetExchangeQuery,
+} = exchangeApi;
 
 // var requestURL = 'https://api.exchangerate.host/latest';
 // var request = new XMLHttpRequest();

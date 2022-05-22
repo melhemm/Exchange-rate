@@ -1,0 +1,27 @@
+.navbar {
+  background: rgb(2, 36, 103);
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.navbar > div {
+  padding: 1rem;
+}
+
+form > input {
+  width: 200px;
+  min-width: 150px;
+  padding: 5px 0 5px 10px;
+}
+
+form > button {
+  padding: 5px 6px 5px 6px;
+  font-weight: 600;
+}
+
+form > button:hover {
+  cursor: pointer;
+}

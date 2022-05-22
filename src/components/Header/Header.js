@@ -15,14 +15,21 @@ export const Header = () => {
     setTerm("")
   }
   return (
-    <div>
-      <form onSubmit={submitHandler}>
-        <input type="text" 
-        value={term} 
-        placeholder="Search" 
-        onChange={(e) => setTerm(e.target.value)} />
-        <button type='submit'>Search</button>
-      </form>
-    </div>
+    <>
+      <div className='navbar'>
+        <div>
+          <h1>Movies DB</h1>
+        </div>
+        <div>
+          <form onSubmit={submitHandler}>
+            <input type="text" 
+            value={term} 
+            placeholder="Search" 
+            onChange={(e) => setTerm(e.target.value)} />
+            <button type='submit'>Search</button>
+          </form>
+        </div>
+      </div>
+    </>
   )
 }

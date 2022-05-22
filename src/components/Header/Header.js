@@ -17,18 +17,20 @@ export const Header = () => {
   return (
     <>
       <div className='navbar'>
+       <div className='flex-container'>
         <div>
-          <h1>Movies DB</h1>
-        </div>
-        <div>
-          <form onSubmit={submitHandler}>
-            <input type="text" 
-            value={term} 
-            placeholder="Search" 
-            onChange={(e) => setTerm(e.target.value)} />
-            <button type='submit'>Search</button>
-          </form>
-        </div>
+            <h1>Movies DB</h1>
+          </div>
+          <div>
+            <form onSubmit={submitHandler}>
+              <input type="text" 
+              value={term} 
+              placeholder="Search" 
+              onChange={(e) => setTerm(e.target.value)} />
+              <button type='submit'>Search</button>
+            </form>
+          </div>
+       </div>
       </div>
     </>
   )

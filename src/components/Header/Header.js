@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
+import "./Header.scss";
 import { fetchAsyncMovies, fetchAsyncShows } from '../../features/movies/movieSlice';
 
 export const Header = () => {
